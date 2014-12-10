@@ -35,9 +35,16 @@
         <source path="http://download.opensuse.org/distribution/13.1/repo/oss/"/>
       </repository>
       <packages type="image" patternType="onlyRequired">
+        <opensusePattern name="office"/>
         <opensusePattern name="kde4"/>
         <opensusePattern name="base"/>
         <opensusePattern name="x11"/>
+        <package name="mono-complete"/>
+        <package name="git"/>
+        <package name="gcc-java"/>
+        <package name="kernel-source"/>
+        <package name="gcc-c++"/>
+        <package name="grub"/>
         <package name="wine"/>
         <package name="java-1_7_0-openjdk"/>
         <package name="kdebase4-openSUSE"/>
@@ -101,7 +108,7 @@
       <language>en_GB.UTF-8</language>
       <keytable>uk.map.gz</keytable>
     </locale>
-    <estimated_size>2240</estimated_size>
+    <estimated_size>3580</estimated_size>
     <size_offset>0</size_offset>
     <non_interactive/>
     <oem_disk_size>16G</oem_disk_size>

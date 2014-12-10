@@ -25,9 +25,16 @@
     <user name='root' pwd='$1$dQzqbCSC$fo2sdgL6Sbbdg9ykyACwO1' home='/root' shell='/bin/bash'/>
   </users>
   <packages type='image' patternType='onlyRequired'>
+    <opensusePattern name='office'/>
     <opensusePattern name='kde4'/>
     <opensusePattern name='base'/>
     <opensusePattern name='x11'/>
+    <package name='mono-complete'/>
+    <package name='git'/>
+    <package name='gcc-java'/>
+    <package name='kernel-source'/>
+    <package name='gcc-c++'/>
+    <package name='grub'/>
     <package name='wine'/>
     <package name='java-1_7_0-openjdk'/>
     <package name='kdebase4-openSUSE'/>
