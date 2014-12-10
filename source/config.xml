@@ -6,13 +6,21 @@
     <specification>openSUSE 13.1 KDE 4</specification>
   </description>
   <preferences>
-    <type checkprebuilt='true' boot='oemboot/suse-13.1' fsnocheck='true' filesystem='ext3' bootloader='grub2' installiso='true' installboot='install' kernelcmdline='quiet' fsmountoptions='acl' image='oem'>
-      <oemconfig>
-        <oem-swap>true</oem-swap>
-        <oem-swapsize>512</oem-swapsize>
-      </oemconfig>
+    <type checkprebuilt='true' boot='isoboot/suse-13.1' fsnocheck='true' bootloader='grub2' flags='clic' hybrid='true' kernelcmdline='quiet' fsmountoptions='acl' image='iso'>
+      <split>
+        <temporary>
+          <file name='/var'/>
+          <file name='/var/*'/>
+          <file name='/etc'/>
+          <file name='/etc/*'/>
+          <file name='/tmp'/>
+          <file name='/tmp/*'/>
+          <file name='/home'/>
+          <file name='/home/*'/>
+        </temporary>
+      </split>
     </type>
-    <version>1.0.1</version>
+    <version>1.0.3</version>
     <packagemanager>zypper</packagemanager>
     <rpm-check-signatures>false</rpm-check-signatures>
     <rpm-force>false</rpm-force>
@@ -23,6 +31,9 @@
   </preferences>
   <users group='root'>
     <user name='root' pwd='$1$dQzqbCSC$fo2sdgL6Sbbdg9ykyACwO1' home='/root' shell='/bin/bash'/>
+  </users>
+  <users group='users'>
+    <user name='tux' pwd='$1$NCrc8mXu$BuB6dkSr3UjmFZh4Id7KP/' home='/home/tux' shell='/bin/bash'/>
   </users>
   <packages type='image' patternType='onlyRequired'>
     <opensusePattern name='office'/>
@@ -67,6 +78,9 @@
     <package name='yast2-branding-openSUSE'/>
     <package name='yast2-theme-openSUSE'/>
     <package name='yast2-x11'/>
+    <package name='yast2-live-installer'/>
+    <package name='yast2-users'/>
+    <package name='btrfsprogs'/>
     <archive name='plymouth.tar' bootinclude='true'/>
     <package name='gfxboot-devel' bootinclude='true'/>
     <archive name='kdm4.tar'/>
